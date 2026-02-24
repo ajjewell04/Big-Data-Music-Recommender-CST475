@@ -7,7 +7,7 @@ df = pd.read_csv('msd_flattened.csv')
 
 # 2. Select only the numerical columns for math
 # We include tempo, loudness, duration, and the 12 timbre dimensions
-feature_cols = ['tempo', 'loudness', 'duration'] + [f'timbre_mean_{i}' for i in range(12)]
+feature_cols = ['tempo', 'loudness', 'duration'] 
 features = df[feature_cols]
 
 # 3. CRITICAL: Standardization
@@ -42,4 +42,4 @@ def find_similar_songs(song_title):
 
 # TEST IT!
 # Pick a song title that you saw in your CSV
-find_similar_songs("Wake Me Up When September Ends (Live at Foxboro_ MA 9/3/05)")
+find_similar_songs("Take Me to Church")
